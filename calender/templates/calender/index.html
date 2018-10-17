@@ -1,4 +1,4 @@
-{% load static %}
+<!-- {% load static %} -->
 <!DOCTYPE HTML>
 <html lang="en-US">
 	<head>
@@ -11,23 +11,10 @@
 
 		<!-- Font Awesome served from CDN -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-		<link rel="stylesheet" type="text/css" href="{% static 'calender/css/style.css' %}" />
-		<link rel="shortcut icon" href="{% static 'calender/favicon.png' %}">
+		<link rel="stylesheet" type="text/css" href="././static/calender/css/style.css" />
+		<link rel="shortcut icon" href="././static/calender/favicon.png">
 	</head>
 	<body>
-		<div id="left-bar">
-			<br><br><br><br><br><br><br><br><br><br>
-			<div id="clock">
-				<!-- To display hour and mins -->
-				<span id="hourmin"></span>
-				<!-- To display AM/PM -->
-				<span id="ap"></span>
-			</div>
-			<br><br><br><br><br><br>
-			<span class="weather-heading">Weather</span>
-			<div id="current-weather"></div>
-			<div id="status"></div>
-		</div>
 		<div id="right-area">
 			<div id="menu-bar">
 				<i class="fa fa-chevron-up" onclick="nextMonth();"></i>&nbsp;
@@ -97,11 +84,9 @@
 
 		<!-- jQuery, Weather script, events script, calender creation, clock, google calender sync, google calender check login status on load -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="{% static 'calender/js/weather.js' %}"></script>
-		<script src="{% static 'calender/js/event.js' %}"></script>
-		<script src="{% static 'calender/js/calender.js' %}"></script>
-		<script src="{% static 'calender/js/clock.js' %}"></script>
-		<script src="{% static 'calender/js/google_calender.js' %}"></script>
+		<script src="././static/calender/js/event.js"></script>
+		<script src="././static 'calender/js/calender.js"></script>
+		<script src="././static/calender/js/google_calender.js"></script>
 		<script async defer src="https://apis.google.com/js/api.js"
 			onload="this.onload=function(){};handleClientLoad()"
 			onreadystatechange="if (this.readyState === 'complete') this.onload()">

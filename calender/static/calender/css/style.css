@@ -5,12 +5,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 }
-#left-bar {
-	background-color: #2ed39e;
-	width: 15%;
-	min-height: 100vh;
-	float: left;
-}
+
 
 #right-area {
 	width: 85%;
@@ -38,15 +33,6 @@ body {
 	font-size: 1.1em;
 }
 
-#clock {
-	text-align: center;
-	color: white;
-	font-weight: 300;
-}
-
-#hourmin {
-	font-size: 3.7em;
-}
 
 .container {
 	height: calc(100vh - 38px);
@@ -86,44 +72,10 @@ td {
 	border-left: none;
 }
 
-.weather {
-	text-align: right;
-	cursor: default;
-	width: 80%;
-	display: inline-block;
-	font-size: 0.8em;
-	color: #2ed39e;
-}
 
 .currentday {
 	background-color: #2ed39e;
 	color: white;
-}
-
-.currentday .weather {
-	color: white;
-}
-
-#current-weather {
-	background-color: #2bc493;
-	color: white;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-.current-weather-big {
-	width: 100%;
-	padding-left: 30px;
-	text-align: center;
-	font-size: 2.5em;
-	font-weight: 300;
-}
-
-.weather-heading {
-	color: white;
-	padding-left: 30px;
-	font-size: 0.8em;
-	font-weight: 400;
 }
 
 #addEvent {
@@ -216,15 +168,15 @@ textarea {
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #c1c1c1;  
+   color: #c1c1c1;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #c1c1c1;  
+   color: #c1c1c1;
 }
 
-:-ms-input-placeholder {  
-   color: #c1c1c1;  
+:-ms-input-placeholder {
+   color: #c1c1c1;
 }
 
 #status {
@@ -271,7 +223,7 @@ textarea {
 	border-radius: 3px;
 	background-color: #ff8787;
 	width: 100%;
-	height: 20px;	
+	height: 20px;
 }
 
 #viewEvent {
