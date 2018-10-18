@@ -16,13 +16,11 @@
 	</head>
 	<body>
 		<div id="right-area">
+			<i class="fa fa-arrow-left" onclick="prevMonth();"></i>
+			<span class="month"></span> <span class="year"></span>
+			<i class="fa fa-arrow-right" onclick="nextMonth();"></i>
 			<div id="menu-bar">
-				<i class="fa fa-chevron-up" onclick="nextMonth();"></i>&nbsp;
-				<i class="fa fa-chevron-down" onclick="prevMonth();"></i>&nbsp;&nbsp;&nbsp;&nbsp;
-				<span class="month"></span> <span class="year"></span>
-				<span class="icons-right">
 					<button id="authorize-button">Sign In</button>
-					<i class="fa fa-refresh" id="sync"></i>&nbsp;&nbsp;
 					<i class="fa fa-gear"></i>&nbsp;&nbsp;&nbsp;
 				</span>
 			</div>

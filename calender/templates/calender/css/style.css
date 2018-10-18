@@ -1,36 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata');
 
 body {
-	margin: 0;
+	margin: 30px;
 	font-family: 'Inconsolata', sans-serif;
-	font-weight: 700;
+	font-weight: 900;
+	background-color: #98B9DB
 }
 
 
 #right-area {
-	width: 85%;
-	min-height: 100vh;
-	float: right;
+	color: #424D76;
+	height: 50px;
+	text-align: center;
+	width: 100%;
+	font-size: 25px;
 }
 
 #menu-bar {
-	color: #2ed39e;
-	padding-top: 7px;
-	height: 30px;
-	text-align: center;
-	border-bottom: 1px solid #e5e6e7;
+	color: #424D76;
+	height: 50px;
+	text-align: right;
+
 }
 
-.fa-chevron-up,
-.fa-chevron-down {
-	font-size: 0.8em;
+.fa-arrow-right,
+.fa-arrow-left {
+	font-size: .75em;
 	cursor: pointer;
-}
-
-.icons-right {
-	position: absolute;
-	right: 0;
-	font-size: 1.1em;
 }
 
 
@@ -43,17 +39,17 @@ body {
 
 table {
 	border: none;
-	border-bottom: 1px solid #e5e6e7;
+	border-bottom: 1px solid #F8F9F7;
 	min-height: 80%;
 	width: 100%;
-	color: #b3b3b3;
+	color: #F8F9F7;
 	border-collapse: collapse;
 }
 
 tr, td {
 	margin: 0;
 	padding: 5px 0px 0px 5px;
-	border: 1px solid #e5e6e7;
+	border: 1px solid #F8F9F7;
 	vertical-align: top;
 }
 
@@ -74,7 +70,7 @@ td {
 
 
 .currentday {
-	background-color: #2ed39e;
+	background-color: #25add1;
 	color: white;
 }
 
@@ -96,7 +92,7 @@ td {
 }
 
 .eveBoxDate {
-	color: #ff8787;
+	color: #F8F9F7;
 	display: inline-block;
 	font-weight: bold;
 	font-size: 0.9em;
@@ -190,7 +186,7 @@ textarea {
 
 .event-rectangles {
 	cursor: default;
-	border: 3px solid #2ed39e;
+	border: 3px solid #25add1;
 	border-radius: 3px;
 	margin-bottom: 3px;
 	height: 20px;
@@ -204,8 +200,8 @@ textarea {
 
 .currentday .event-rectangles {
 	background-color: White;
-	border: 3px solid #2ed39e;
-	color: #2ed39e;
+	border: 3px solid #5a58e2;
+	color: #5a58e2;
 	margin-bottom: 3px;
 	height: 20px;
 	padding-left: 10px;
@@ -278,10 +274,10 @@ textarea {
 }
 
 #authorize-button {
-	background-color: #2ed39e;
+	background-color: #424D76;
 	color: white;
 	border: none;
-	padding: 5px 10px 5px 10px;
+	padding: 10px 15px 10px 15px;
 	margin-right: 10px;
 }
 
@@ -290,9 +286,6 @@ textarea {
 }
 
 @media only screen and (max-width: 750px) {
-	#left-bar {
-		display: none;
-	}
 	#right-area {
 		float: none;
 		margin-left: 20px;
@@ -307,9 +300,6 @@ textarea {
 	td {
 		width: 40vw !important;
 		height: 30px;
-	}
-	.weather {
-		display: none;
 	}
 	.event-rectangles {
 		padding-left: 5px;
