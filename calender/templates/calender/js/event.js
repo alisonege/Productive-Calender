@@ -16,24 +16,21 @@ function td_click(event) {
 
 	// Initializing new event box's input field as blank
 	$("#eventName").val("");
-	$("#eventLocation").val("");
-	$("#eventStartTime").val("");
-	$("#eventEndTime").val("");
+	$("#eventDuration").val("");
 	$("#eventDescription").val("");
-	$("#eventStartDate, #eventStartTime, #eventEndDate, #eventEndTime").attr("disabled", true);
-	$("#eventAllDay").removeClass("fa-square-o").addClass("fa-check-square-o");
 
-	// 
+
+	//
 	// Automatically setting start and end date in New event box
-	// 
+	//
 	var td_date = parseInt(td_id);
 	var td_month = td_id.substr(td_date.toString().length);
 	setStartEndDate(td_date, td_month);
 	$(".eveBoxDate").text(td_date + " " + td_month + " " + year);
 
-	// 
+	//
 	// Displaying new event box at apt location
-	// 
+	//
 	$("#" + td_id).append("<div id='justForShowEvent'></div>");
 	var td_left = $("#" + td_id).position().left;
 	var td_width = $("#" + td_id).width();
@@ -46,9 +43,9 @@ function td_click(event) {
 	}
 }
 
-// 
+//
 // Automatically setting the start and end date of event box's input field
-// 
+//
 function setStartEndDate(date, month) {
 	if (date < 10) {date = "0" + date};
 	month = month_number[month_names.indexOf(month)];
@@ -57,9 +54,9 @@ function setStartEndDate(date, month) {
 	$("#eventEndDate").val(year + "-" + month + "-" + date);
 }
 
-// 
+//
 // Close new event box and edit event box and remove color from selected event
-// 
+//
 function closeEveBox(e) {
 	e.preventDefault();
 
@@ -69,9 +66,9 @@ function closeEveBox(e) {
 	$("#viewEvent").hide();
 }
 
-// 
+//
 // Check if the event is all day event by checking the Font Awesome Icon state
-// 
+//
 function allDay() {
 	if ($(".fa-check-square-o").length) {
 		$("#eventStartDate, #eventStartTime, #eventEndDate, #eventEndTime").attr("disabled", false);
@@ -82,9 +79,9 @@ function allDay() {
 	}
 }
 
-// 
+//
 // Updating the clicked event
-// 
+//
 function updateEvent(e) {
 	e.preventDefault();
 
@@ -124,9 +121,9 @@ function updateEvent(e) {
 	}
 }
 
-// 
+//
 // Display clicked event's details when any event is clicked
-// 
+//
 function event_rectangle_clicked(event) {
 	event.stopPropagation();
 	closeEveBox(event);
@@ -141,11 +138,11 @@ function event_rectangle_clicked(event) {
 		// console.log(data);
 		$(".viewTitle").text(data["event_name"]);
 		$(".viewLocation").text(data["location"]);
-		
+
 		if (data["description"] != "") {
 			$(".viewDescription").text(data["description"]);
 		}
-		
+
 		var start_date = new Date(data["start_date"].replace(/-/g,'/'));
 		var day_num = start_date.getDay();
 		var day = day_name[day_num];
@@ -172,9 +169,9 @@ function event_rectangle_clicked(event) {
 	});
 }
 
-// 
+//
 // Delete an event
-// 
+//
 function deleteEve(event) {
 	event.preventDefault();
 	event.stopPropagation();
@@ -188,9 +185,9 @@ function deleteEve(event) {
 	});
 }
 
-// 
+//
 // Display Edit event box with clicked event's details when an event is clicked
-// 
+//
 function editEve(event) {
 	event.preventDefault();
 	event.stopPropagation();
@@ -227,9 +224,9 @@ function editEve(event) {
 	});
 }
 
-// 
+//
 // Refresh all events
-// 
+//
 function refreshAllEvents() {
 
 	$(".event-rectangles").remove();
@@ -256,7 +253,7 @@ function refreshAllEvents() {
 				Date1 = new Date(Date1.replace(/-/g,'/'));
 				Date2 = new Date(Date2.replace(/-/g,'/'));
 				var timeDiff = Math.abs(Date2.getTime() - Date1.getTime());
-				var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+				var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
 				// console.log(diffDays);
 
 				for (var j = 0; j <= diffDays; j++) {

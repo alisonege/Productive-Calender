@@ -20,8 +20,20 @@
 			<span class="month"></span> <span class="year"></span>
 			<i class="fa fa-arrow-right" onclick="nextMonth();"></i>
 			<div id="menu-bar">
-					<button id="authorize-button">Sign In</button>
-					<i class="fa fa-gear"></i>&nbsp;&nbsp;&nbsp;
+					<!-- <button id="authorize-button">Sign In</button> -->
+					<button id="add-event">Add Event</button>
+					<!-- <i class="fa fa-gear"></i> -->
+					<div class="dropdown">
+						<button class="fa fa-gear">
+				      <!-- <button class="fa fa-gear"></button> -->
+				    </button>
+				    <div class="dropdown-content">
+				      <button id="authorize-button">Sign In</button>
+					<!-- <button class="fa fa-gear"></button>
+						  <div class="dropdown-content">
+						  		<button id="authorize-button">Sign In</button> -->
+						  </div>
+						</div>
 				</span>
 			</div>
 			<div class="container"></div>
@@ -35,22 +47,11 @@
 						<input type="text" id="eventId" value="" hidden>
 						<br>
 						<input type="text" placeholder="Event Name" id="eventName" value="" required>
-						<input type="text" placeholder="Location" id="eventLocation" value="" required>
+						<input type="number" placeholder="Event Duration in Minutes" id="eventDuration" name ="eventDuration" required />
 						<br>
-						<strong>&nbsp;&nbsp;Starts</strong><br>
-						<input type="date" id="eventStartDate" disabled="true" required>
-						<input type="time" id="eventStartTime" disabled="true">
-						<br>
-						<strong>&nbsp;&nbsp;Ends</strong><br>
-					  	<input type="date" id="eventEndDate" disabled="true" required>
-						<input type="time" id="eventEndTime" disabled="true">
-						<br>
-						<i class="fa fa-check-square-o" id="eventAllDay" onclick="allDay();"></i>
-						&nbsp;&nbsp;All Day
-						<br><br>
 						<div id="error"></div>
 						<strong>&nbsp;&nbsp;Description</strong><br>
-						<textarea id="eventDescription" cols="28" rows="6"></textarea>
+						<textarea id="eventDescription" cols="23" rows="3"></textarea>
 						<br>
 						<button id="eventCancelButton" onclick="closeEveBox(event);"><strong>Cancel</strong></button>
 						<input type="submit" id="eventSaveButton" value="Save">
