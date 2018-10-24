@@ -4,7 +4,7 @@ var month_number = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", 
 var day_name = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 var year = parseInt($(".year").attr('id'));
 
-// If empty space or weather part of any date is clicked, create new event box
+//If empty space or weather part of any date is clicked, create new event box
 function td_click(event) {
 	event.stopPropagation();
 	closeEveBox(event);

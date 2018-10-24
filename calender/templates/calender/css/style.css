@@ -160,6 +160,15 @@ input, textarea {
 	margin-bottom: 10px;
 }
 
+#dueDate {
+	font-size: .7em;
+	width: 90%;
+	height: 25px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding: 5px 7px 5px 7px;
+}
+
 #eventDuration {
 	font-size: .7em;
 	width: 90%;
@@ -361,7 +370,7 @@ textarea {
 		font-size: 0.7em;
 		width: 140px;
 	}
-	#eventName, #eventLocation {
+	#eventName, #dueDate, #eventDuration {
 		font-size: 1.2em;
 		width: 120px;
 		height: 10px;
@@ -379,6 +388,7 @@ textarea {
 	#eventDescription {
 		height: 30px;
 	}
+
 	#authorize-button {
 		position: fixed;
 		left: 50px;
